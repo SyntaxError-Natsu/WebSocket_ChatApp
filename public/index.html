@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp-like Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>💬 Chat App <span class="online-indicator"></span></h2>
+            <div class="user-info">
+                <input type="text" id="username" placeholder="Enter your name" maxlength="20">
+            </div>
+        </div>
+
+        <div class="messages-container" id="messagesContainer">
+            <!-- Messages will appear here -->
+        </div>
+
+        <div class="message-input-container">
+            <input type="text" id="messageInput" placeholder="Type a message..." maxlength="500">
+            <button id="sendButton">
+                <span>Send</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Enhanced Edit Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <h3>✏️ Edit Message</h3>
+            <input type="text" id="editInput" placeholder="Edit your message...">
+            <div class="modal-buttons">
+                <button id="saveEdit">Save Changes</button>
+                <button id="cancelEdit">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
